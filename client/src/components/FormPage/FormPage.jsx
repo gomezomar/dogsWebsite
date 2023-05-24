@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { postDog, getTemperaments } from '../redux/actions';
+import { postDog, getTemperaments } from '../../redux/actions';
+import FPStyle from "./FormPage.module.css";
 
 export default function FormPage() {
     const dispatch = useDispatch()
@@ -176,43 +177,47 @@ export default function FormPage() {
     }
 
     return(
-        <div>
-            <Link to='/home'><button>Return Home Page</button></Link>
-            <h1>Create Dog Breed</h1>
-            <form onSubmit={ (e) => handleSubmit(e)}>
-                <div>
-                    <label>Name Dog Breed:  </label>
-                        <input
-                        type="text"
-                        value={input.name}
-                        name = "name"
-                        onChange={handleChangeName}
-                        />
-                    {errors.name && (
-                        <p className='error'>{errors.name}</p>
-                    )}
-                </div>
-                <div>
-                <h3>Weight:</h3>
-                    <label>Min Weight: (in kg):  </label>
-                        <input
-                        type="number"
-                        min="1" max="50"
-                        value={input.minWeight}
-                        name = "minWeight"
-                        onChange={handleChangeMinW}
-                    />
-                    <label>Max Weight: (in kg):  </label>
+        <div className={FPStyle.container}>
+            
+            <div className={FPStyle.card}>
+                <h1>Create Dog Breed</h1>    
+                <form onSubmit={ (e) => handleSubmit(e)}>
+                    <div>
+                        <label>Name Dog Breed:  </label>
+                            <input
+                            type="text"
+                            value={input.name}
+                            name = "name"
+                            onChange={handleChangeName}
+                            className={FPStyle.marg1}
+                            />
+                        {errors.name && (
+                            <p className='error'>{errors.name}</p>
+                        )}
+                    </div>
+                    <h3>Weight:</h3>
+                    <div>
+                        <label>Min Weight: (in kg):  </label>
+                            <input
+                            type="number"
+                            min="1" max="50"
+                            value={input.minWeight}
+                            name = "minWeight"
+                            onChange={handleChangeMinW}
+                            className={FPStyle.marg1}
+                            />
+                        <label className={FPStyle.marg2} >Max Weight: (in kg):  </label>
                         <input
                         type="number"
                         min="1" max="50"
                         value={input.maxWeight}
                         name = "maxWeight"
                         onChange={handleChangeMaxW}
-                    />
-                    {errors.minWeight && (
-                        <p className='error'>{errors.minWeight}</p>
-                    )}
+                        className={FPStyle.marg1}
+                        />
+                        {errors.minWeight && (
+                            <p className='error'>{errors.minWeight}</p>
+                        )}
                     {errors.maxWeight && (
                         <p className='error'>{errors.maxWeight}</p>
                     )}
@@ -226,14 +231,16 @@ export default function FormPage() {
                         value={input.minHeight}
                         name = "minHeight"
                         onChange={handleChangeMinH}
+                        className={FPStyle.marg1}
                     />
-                    <label>Max Height: (in cm):  </label>
+                    <label className={FPStyle.marg2} >Max Height: (in cm):  </label>
                         <input
                         type="number"
                         min="1" max="150"
                         value={input.maxHeight}
                         name = "maxHeight"
                         onChange={handleChangeMaxH}
+                        className={FPStyle.marg1}
                     />
                     {errors.minHeight && (
                         <p className='error'>{errors.minHeight}</p>
@@ -269,14 +276,18 @@ export default function FormPage() {
                     )}   
                     
                 </div>
-                <button type="submit">Create Dog Breed</button>
+                <button type="submit" className={FPStyle.bt2} >Create Dog Breed</button>
             </form>
+            <div className={FPStyle.tpm}>
             {input.temperamentsId.map(id =>
-                <div>
-                <button onClick={() => handleDelete(id)}>x</button>
-                <p>{id}</p>
+                <div className={FPStyle.cr}>
+                <button onClick={() => handleDelete(id)} className={FPStyle.x} >x</button>
+                <p className={FPStyle.pc}>{id}</p>
                 </div> 
                 )}
+            </div>    
+            </div>
+            <Link to='/home'><button className={FPStyle.bt} >Return Home Page</button></Link>
         </div>
 
     )

@@ -1,0 +1,40 @@
+.container{
+    min-width: 100%;
+    background: black;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.circle {
+    border-radius: 50%;
+    
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+  }
+
+  .bt{
+    
+    
+    margin: none;
+    text-transform: none;
+    background-color: #FFFF01;
+    padding: 6px 130px;
+    border-radius: 8px;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+    font-size: 17px; 
+    line-height: 2;
+  }
+
+  

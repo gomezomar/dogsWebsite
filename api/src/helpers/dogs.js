@@ -25,7 +25,7 @@ const getApiInfo = async() =>{
                 weight: ch.weight.metric,
                 image: ch.image.url,
                 life_span: ch.life_span,
-                temperament: ch.temperament
+                temperament: ["not found"]
             };  
         }
         
@@ -34,7 +34,7 @@ const getApiInfo = async() =>{
 };
 
 const getDBinfo = async() => {
-    return await Dog.findAll({
+    const dbInfo = await Dog.findAll({
         include:{
             model: Temperament,
             attributes: ['name'],
@@ -43,6 +43,25 @@ const getDBinfo = async() => {
             },
         }
     })
+
+    const Infodb = await dbInfo.map(ch =>{
+        let temperament = []
+        for (let i = 0; i < ch.temperaments.length; i++) {
+            let a = ch.temperaments[i].name
+           temperament.push(a)
+        }
+        return{
+            id: ch.id,
+            name: ch.name,
+            height: ch.height,
+            weight: ch.weight,
+            image: ch.image,
+            life_span: ch.life_span,
+            temperament: temperament,
+            createdInDb:  ch.createdInDb,
+        }; 
+    });
+    return Infodb;
 };
 
 const getAllDogs = async () => {

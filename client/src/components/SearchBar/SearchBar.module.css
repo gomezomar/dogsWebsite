@@ -1,0 +1,9 @@
+.bt{
+    
+    border-radius: 4px;
+    border: #000 1px solid;
+    margin-left: 5px;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+    font-size: 15px; 
+    line-height: 1.3;
+  }

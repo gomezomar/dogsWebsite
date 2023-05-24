@@ -1,0 +1,100 @@
+.container{
+    background: #808080;
+    min-width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card{
+    background: #f8f8f8;
+    border: #000 5px solid;
+    border-radius: 8px;
+    min-width: 50%;
+    max-width: 50%;
+    min-height: 50;
+    margin: 0 auto;
+    margin-top: 1%;
+    padding-bottom: 1%;
+    
+  }
+
+  .tpm{
+    background: #f8f8f8;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction: row;
+    
+  }
+  
+  
+.bt{
+    margin-top: 10%;
+    background-color: #FFFF01;
+    border-radius: 5px;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+    font-size: 15px; 
+    line-height: 2;
+}
+.bt2{
+    margin-top: 5%;
+    color: #fff;
+    background: #808080;
+    border-radius: 5px;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+    font-size: 15px; 
+    line-height: 1;
+}
+.cr{
+    margin: 3%;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background:#f8f8f8;
+    border-radius: 5px;
+    border: #000 1px solid;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Light,Avenir Roman,Avenir Book;
+    font-size: 17px; 
+    line-height: 2;
+}
+.pc{
+    color:#808080;
+}
+
+
+.x{
+    border: none;
+    border-radius: 5px;
+    margin-left: 70px;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+    background: #f8f8f8;
+    color: #808080;
+    font-size: 12px; 
+}
+
+p{ 
+    text-decoration: none;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+    color: red  
+}
+  
+  
+  
+  .marg1 {
+    margin-left: 2px;
+  }
+  
+  .marg2 {
+   margin-left: 45px;
+  }

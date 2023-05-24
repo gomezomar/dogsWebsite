@@ -1,0 +1,63 @@
+.container{
+   width: 300px;
+   min-height: 470px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:  #f8f8f8; 
+  border: #000 1px solid;
+  border-radius: 8px;
+  margin-top: 10PX;
+    
+}
+
+.circle {
+    border-radius: 50%;
+    
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+  }
+
+  .bt{
+    
+    
+    margin: none;
+    text-transform: none;
+    background-color: #FFFF01;
+    padding: 6px 130px;
+    border-radius: 8px;
+    font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+    font-size: 17px; 
+    line-height: 2;
+  }
+
+  lu {
+    list-style-type: none;
+    text-align: center
+
+  }
+  li{
+    background-color:  #C4C4C442;
+    border: #000 1px solid;
+    display: inline;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-size: 20px; 
+    padding: 6px 5px;
+    
+    
+
+  }
+img{
+    width: 220px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }

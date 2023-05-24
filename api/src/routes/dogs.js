@@ -28,8 +28,37 @@ router.get("/:id", async(req, res) =>{
   const  idDog = req.params.id;
     const dogs = await getAllDogs();
     const dog = dogs.filter(br => br.id == idDog);
-    if (dog.length) {
-        res.status(200).json(dog);
+
+    const Info = await dog.map(ch =>{
+      let temperament =ch.temperament
+      let tp ='not data';
+    if (temperament === undefined){tp = 'not data'}
+    else{
+    if(typeof temperament[0] === 'string'){tp = temperament.join(", ")}
+    if (typeof temperament[0] !== 'string' && temperament !== undefined) {
+        if (temperament.length === 1) {
+            tp = temperament[0].name
+        }else{
+            for (let i = 0; i < temperament.length; i++) {
+                temperament[i]= temperament[i].name
+            }
+            tp = temperament.join(", ")
+        }
+    }}
+
+      return{
+          id: ch.id,
+          name: ch.name,
+          height: ch.height,
+          weight: ch.weight,
+          image: ch.image,
+          life_span: ch.life_span,
+          temperament: tp,
+     }; 
+  });
+
+    if (Info.length) {
+        res.status(200).json(Info);
     }else{
         res.status(404).send('ups! Dog not found');
     }

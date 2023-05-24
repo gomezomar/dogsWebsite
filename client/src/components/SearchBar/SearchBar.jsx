@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getNameDogs } from "../redux/actions";
+import { getNameDogs } from "../../redux/actions";
+import sbStyle from "./SearchBar.module.css";
 
 export default function SearchBar({paginated}) {
     const dispatch = useDispatch();
@@ -28,7 +29,7 @@ export default function SearchBar({paginated}) {
             placeholder="search Dog Breed..."
             onChange={(e) => handleInputChange(e)}
             />
-            <button type="submit" onClick={(e)=> handleSumit(e)}>Search</button>
+            <button type="submit" onClick={(e)=> handleSumit(e)}className={sbStyle.bt}>Search</button>
 
         </div>
     )

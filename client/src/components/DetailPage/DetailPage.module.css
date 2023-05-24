@@ -1,0 +1,45 @@
+.container{
+  background: #808080;
+  min-width: 100%;
+  min-height: 100vh;
+  text-align: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.bt {
+  
+  margin-top: 10%;
+  background-color: #FFFF01;
+  border-radius: 5px;
+  font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+  font-size: 15px; 
+  line-height: 2;
+}
+.card{
+  background: #f8f8f8;
+  border: #000 5px solid;
+  border-radius: 8px;
+  min-width: 50%;
+  max-width: 50%;
+  min-height: 50;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+.imag{
+  width: 300px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.p1 {
+  font-family: Avenir Medium,Avenir Heavy,Avenir Black,Avenir Light,Avenir Roman,Avenir Book;
+  font-size: 15px; 
+  line-height: 2;
+  color: #000
+}
